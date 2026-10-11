@@ -21,7 +21,7 @@ Format: what, verdict and why, date (2026), **reopen only if**. Everything is fr
 | Qwen3.8 at maximum reasoning (`xhigh`) | Over-thinks: 7-8x tokens, no better result | 09-16 | - |
 | TabbyAPI `ngram` draft with the 27B at 32K | `Insufficient VRAM in split` | 09-16 | Context lowered a lot |
 | Hot-loading vision in TabbyAPI | Neither the API nor `tabby_config.yml` enables it; needs top-level `config.yml` at startup | 09-16 | - |
-| Updating TabbyAPI + exllamav3 to 1.5.1 / 1.6.0 | **Reverted.** `gate and up must share a bit width` on the mixed-bit Qwen3-Coder-30B quant (see pitfalls #6). Production stayed on TabbyAPI `fcc1a107` (2026-08-26) + exllamav3 1.4.4. Auto-detection of `tool_format` did work | 09-23, 10-09 | exllamav3 supports mixed `K_gate != K_up` again **and** its performance cost is acceptable; or you use a uniform quant |
+| Updating TabbyAPI + exllamav3 to 1.5.1 / 1.6.0 | **Reverted.** `gate and up must share a bit width` on the mixed-bit Qwen3-Coder-30B quant (see pitfalls #6). Production stayed on TabbyAPI `fcc1a107` (2026-08-26) + exllamav3 1.4.4. Auto-detection of `tool_format` did work | 09-23, 10-09 | Never for that quant: the maintainer removed mixed gate/up support on purpose (exllamav3#502). Use uniform-bit quants, or stay on 1.4.4 |
 | Second GPU / tensor-parallel (NInfer TP2) | Needs a second identical GPU | 09-16 | You buy a second 5060 Ti |
 | MTP for gemma4 in Ollama | No official recipe for Windows/CUDA | 09-11 | Ollama supports it |
 | Whisper large-v3-turbo on GPU | Not worth the VRAM | 09-11 | VRAM to spare |
