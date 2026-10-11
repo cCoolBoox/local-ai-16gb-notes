@@ -56,4 +56,4 @@ On a synthetic 52-fragment manual with paraphrased questions, retrieving the rig
 
 ## Local checking of generated text
 
-`gpt-oss:20b` with medium reasoning and a 16,000-token output cap was the best local reviewer of AI-written course material in our test (43 of 52 injected errors found, almost no extra flags; 11-15 min for 4 lessons). Data and scripts: see the injection benchmark (coming to this account).
+`gpt-oss:20b` with medium reasoning and a 16,000-token output cap was the best local reviewer of AI-written course material in our test (43 of 52 injected errors found, almost no extra flags; 11-15 min for 4 lessons). Data and scripts: [reviewer-injection-bench](https://github.com/cCoolBoox/reviewer-injection-bench).

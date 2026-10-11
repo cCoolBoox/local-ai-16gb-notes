@@ -26,6 +26,8 @@ un 27B de 3 bits en GGUF por Ollama como agente de terminal, Krea 2 Turbo y Z-Im
 - [notes/pitfalls.md](notes/pitfalls.md): las trampas que nos costaron tiempo (Blackwell, ComfyUI, TabbyAPI/exllamav3, Ollama, topes de salida, texto en imágenes) y su arreglo.
 - [notes/discarded.md](notes/discarded.md): lo que probamos y descartamos, por qué y cuándo reabrirlo.
 
+Pruebas abiertas relacionadas: [d1-decision-bench](https://github.com/cCoolBoox/d1-decision-bench) y [reviewer-injection-bench](https://github.com/cCoolBoox/reviewer-injection-bench).
+
 Si lo ejecutas en otra GPU y algún veredicto cambia, abre un issue con la GPU, el controlador, el sistema y las versiones. Las correcciones son bienvenidas.
 
 Licencia: CC0 1.0. Sin garantía; mira la fecha de cada nota.

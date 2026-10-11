@@ -33,6 +33,7 @@ a 27B 3-bit GGUF through Ollama for a terminal agent, Krea 2 Turbo and Z-Image-T
 ## Related open tests
 
 - [d1-decision-bench](https://github.com/cCoolBoox/d1-decision-bench): is a tiny open "decision model" (LiquidAI d1-3B) worth installing next to Ollama? (answer for us: not at our volume).
+- [reviewer-injection-bench](https://github.com/cCoolBoox/reviewer-injection-bench): how good is a local LLM at reviewing AI-written course text? Known errors injected, scored, with the raw outputs.
 
 ## Contributing
 
