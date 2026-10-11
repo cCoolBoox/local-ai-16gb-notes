@@ -19,7 +19,7 @@ Anti-OOM settings that we apply to Ollama: `OLLAMA_KV_CACHE_TYPE=q4_0`, `OLLAMA_
 
 | Model | Size | Engine | Notes |
 |---|---|---|---|
-| Qwen3-Coder-30B-A3B, EXL3 3.5 bpw | 13.1 GB | TabbyAPI | MoE: best quality per GB for us. `draft_mode: ngram` -> 35.8 tok/s. Needs an explicit `tool_format` (see pitfalls) |
+| Qwen3-Coder-30B-A3B, EXL3 3.34 bpw **uniform** (`amanwalksdownthestreet`, branch `3.34bpw-h5-opt`) | 12.4 GB | TabbyAPI + exllamav3 1.6.1 | MoE: best quality per GB for us. In a short test with `draft_mode: ngram`: 76-120 tok/s, 14.2 GB of VRAM with a 32k Q4 cache, tool calls fine, 5/6 on a small code battery (the older mixed-bit 3.5 bpw quant scored the same on exllamav3 1.4.4 at 69-81 tok/s and 14.9 GB). Needs an explicit `tool_format` and, on Windows, `cudaMallocAsync` (see pitfalls). Two runs per configuration, one machine |
 | Qwen3.8-27B, GSQ+RCO IQ3_S GGUF (ISTA-DASLab) | 11.8 GB | Ollama | **Terminal agent default.** 7/7 on our 7-task battery in two independent passes (6/7 before, with the EXL3 quant), `num_ctx` 65536, survived a real ~49,000-token task |
 | Qwen3.8-27B, EXL3 3.0 bpw | 13.8 GB | TabbyAPI | Our only working vision path (see pitfalls); 27 tok/s |
 
