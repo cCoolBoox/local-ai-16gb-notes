@@ -52,7 +52,7 @@ No image model wrote exact text reliably: put prices, names and slogans on after
 | SearXNG + Valkey | Private metasearch for web-enabled chat |
 | mcpo | Exposes MCP tools to Open WebUI as OpenAPI |
 
-On a synthetic 52-fragment manual with paraphrased questions, retrieving the right passage worked for: keywords only 1/24, embeddings 16/24, hybrid (keywords + embeddings) **20/24** at k=10 and 4,500 characters. LLM re-ranking did not help and was 8x slower, so we left it off.
+On a synthetic ~18,000-character manual (24 rules, questions deliberately paraphrased), the right passage was retrieved with 4 fragments per question for: keywords only 1/24, embeddings only 16/24, hybrid (0.7 embeddings) 15/24. So the hybrid did not beat embeddings alone at equal budget; what helped was giving more context: 20/24 with 10 fragments / 4,500 characters (hybrid weighted 0.9 to embeddings). LLM re-ranking did not help and was 8x slower, so we left it off. Small synthetic test, Spanish, one embedder.
 
 ## Local checking of generated text
 
